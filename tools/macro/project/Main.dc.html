@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Macro Daily cover</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Noto+Sans+Thai:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; box-sizing: border-box; background: #233F45; display: flex; flex-direction: column; font-family: 'Plus Jakarta Sans','Noto Sans Thai',system-ui,sans-serif; color: #FFFFFF">
+<div style="position: relative; height: 470px; flex: none; background: #DDE3E6; display: flex; align-items: center; justify-content: center; color: #4A5F63; font-size: 28px">
+[Photo · city financial district]
+<div style="position: absolute; top: 56px; left: 86px; padding: 12px 28px; border-radius: 9999px; background: #FFFFFF; font-size: 24px; font-weight: 700; color: #233F45">FRI 6 NOV 2026</div>
+<div style="position: absolute; bottom: 24px; left: 86px; padding: 8px 20px; border-radius: 9999px; background: #FFFFFF; font-size: 22px; color: #4A5F63">Photo: [credit]</div>
+</div>
+<div style="flex: 1; box-sizing: border-box; padding: 44px 86px 56px 86px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="align-self: flex-start; padding: 10px 28px; border-radius: 9999px; background: {{accent}}; color: #233F45; font-size: 24px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase">Macro Daily</div>
+<div style="font-size: 72px; font-weight: 700; line-height: 1.1">AI selloff shakes global markets</div>
+<div style="font-family: 'Instrument Serif','DM Serif Display',Georgia,serif; font-style: italic; font-weight: 400; font-size: 60px; line-height: 1.1; color: #BFDDF2">five stories that moved today</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; gap: 24px; padding: 14px 0; border-top: 2px solid rgba(255,255,255,0.18)">
+<div style="width: 52px; height: 52px; flex: none; border-radius: 50%; background: {{accent}}; color: #233F45; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700">1</div>
+<div style="font-size: 34px; font-weight: 700; line-height: 1.2">Wall Street's worst day since April 2025</div>
+</div><div style="display: flex; align-items: center; gap: 24px; padding: 14px 0; border-top: 2px solid rgba(255,255,255,0.18)">
+<div style="width: 52px; height: 52px; flex: none; border-radius: 50%; background: {{accent}}; color: #233F45; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700">2</div>
+<div style="font-size: 34px; font-weight: 700; line-height: 1.2">Asia follows: Kospi −8%, trading halted</div>
+</div><div style="display: flex; align-items: center; gap: 24px; padding: 14px 0; border-top: 2px solid rgba(255,255,255,0.18)">
+<div style="width: 52px; height: 52px; flex: none; border-radius: 50%; background: {{accent}}; color: #233F45; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700">3</div>
+<div style="font-size: 34px; font-weight: 700; line-height: 1.2">US jobs report lands 20:30 Bangkok time</div>
+</div><div style="display: flex; align-items: center; gap: 24px; padding: 14px 0; border-top: 2px solid rgba(255,255,255,0.18)">
+<div style="width: 52px; height: 52px; flex: none; border-radius: 50%; background: {{accent}}; color: #233F45; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700">4</div>
+<div style="font-size: 34px; font-weight: 700; line-height: 1.2">Investors rush to safety: gold and bonds</div>
+</div><div style="display: flex; align-items: center; gap: 24px; padding: 14px 0; border-top: 2px solid rgba(255,255,255,0.18)">
+<div style="width: 52px; height: 52px; flex: none; border-radius: 50%; background: {{accent}}; color: #233F45; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700">5</div>
+<div style="font-size: 34px; font-weight: 700; line-height: 1.2">Bitcoin falls with tech stocks</div>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px">
+<div style="width: 14px; height: 14px; border-radius: 50%; background: #F0937B"></div>
+<div style="font-size: 24px; font-weight: 700">@siraptn</div>
+<div style="flex: 1; height: 6px; border-radius: 9999px; background: {{accent}}"></div>
+<div style="font-size: 24px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #BFDDF2">Swipe →</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#BFDDF2","options":["#BFDDF2","#F7C9A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#BFDDF2' };
+  }
+}
+</script>
+</body>
+</html>

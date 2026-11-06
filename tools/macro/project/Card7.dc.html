@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Macro Daily closing quote</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Noto+Sans+Thai:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; box-sizing: border-box; padding: 86px; background: #233F45; display: flex; flex-direction: column; justify-content: space-between; font-family: 'Plus Jakarta Sans','Noto Sans Thai',system-ui,sans-serif; color: #FFFFFF">
+<div style="display: flex; align-items: center; gap: 16px">
+<div style="padding: 12px 28px; border-radius: 9999px; background: #FFFFFF; color: #233F45; font-size: 24px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase">Today's mood: fearful</div>
+<div style="padding: 12px 28px; border-radius: 9999px; background: {{accent}}; color: #233F45; font-size: 24px; font-weight: 700">6 NOV 2026</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 32px">
+<div aria-hidden="true" style="font-family: 'Instrument Serif','DM Serif Display',Georgia,serif; font-style: italic; font-weight: 400; font-size: 220px; line-height: 0.6; height: 90px; color: {{accent}}">“</div>
+<div style="font-size: 72px; font-weight: 700; line-height: 1.2">Be fearful when others are greedy, and be greedy when others are fearful.</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 36px; font-weight: 700">Warren Buffett</div>
+<div style="font-size: 30px; color: #BFDDF2">The New York Times · 2008</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="padding: 16px 36px; align-self: flex-start; border-radius: 9999px; background: {{accent}}; color: #233F45; font-size: 32px; font-weight: 700">Follow @siraptn</div>
+<div style="font-size: 24px; color: #BFDDF2">Not investment advice</div>
+<div style="display: flex; align-items: center; gap: 16px">
+<div style="width: 14px; height: 14px; border-radius: 50%; background: #F0937B"></div>
+<div style="font-size: 24px; font-weight: 700">@siraptn</div>
+<div style="flex: 1; height: 6px; border-radius: 9999px; background: {{accent}}"></div>
+<div style="font-size: 24px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #BFDDF2">Macro Daily · 7/7</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#BFDDF2","options":["#BFDDF2","#F7C9A8"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#BFDDF2' };
+  }
+}
+</script>
+</body>
+</html>

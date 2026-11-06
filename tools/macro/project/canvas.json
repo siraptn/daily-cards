@@ -1,0 +1,293 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-11-06T11:40:00Z"
+ },
+ "title": "@siraptn Macro Daily \u00b7 6 Nov 2026",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "1 \u00b7 Cover"
+  },
+  "Card2.dc.html": {
+   "x": 1160,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "2 \u00b7 US equities"
+  },
+  "Card3.dc.html": {
+   "x": 2320,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "3 \u00b7 Asia equities"
+  },
+  "Card4.dc.html": {
+   "x": 3480,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "4 \u00b7 US jobs and Fed"
+  },
+  "Card5.dc.html": {
+   "x": 4640,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "5 \u00b7 Safe havens"
+  },
+  "Card6.dc.html": {
+   "x": 5800,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "6 \u00b7 Crypto"
+  },
+  "Card7.dc.html": {
+   "x": 6960,
+   "y": 0,
+   "w": 1080,
+   "h": 1350,
+   "title": "7 \u00b7 Closing quote"
+  },
+  "B1.dc.html": {
+   "x": 0,
+   "y": 1800,
+   "w": 1080,
+   "h": 1350,
+   "title": "B \u00b7 1 Cover"
+  },
+  "B2.dc.html": {
+   "x": 1160,
+   "y": 1800,
+   "w": 1080,
+   "h": 1350,
+   "title": "B \u00b7 2 Story"
+  },
+  "B7.dc.html": {
+   "x": 2320,
+   "y": 1800,
+   "w": 1080,
+   "h": 1350,
+   "title": "B \u00b7 7 Quote"
+  },
+  "C1.dc.html": {
+   "x": 0,
+   "y": 3600,
+   "w": 1080,
+   "h": 1350,
+   "title": "C \u00b7 1 Cover"
+  },
+  "C2.dc.html": {
+   "x": 1160,
+   "y": 3600,
+   "w": 1080,
+   "h": 1350,
+   "title": "C \u00b7 2 Story"
+  },
+  "C7.dc.html": {
+   "x": 2320,
+   "y": 3600,
+   "w": 1080,
+   "h": 1350,
+   "title": "C \u00b7 7 Quote"
+  },
+  "M_45_1.dc.html": {
+   "x": 0,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 1"
+  },
+  "M_45_2.dc.html": {
+   "x": 1160,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 2"
+  },
+  "M_45_3.dc.html": {
+   "x": 2320,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 3"
+  },
+  "M_45_4.dc.html": {
+   "x": 3480,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 4"
+  },
+  "M_45_5.dc.html": {
+   "x": 4640,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 5"
+  },
+  "M_45_6.dc.html": {
+   "x": 5800,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 6"
+  },
+  "M_45_7.dc.html": {
+   "x": 6960,
+   "y": 5400,
+   "w": 1080,
+   "h": 1350,
+   "title": "Macro Daily \u00b7 45 \u00b7 7"
+  },
+  "M_34_1.dc.html": {
+   "x": 0,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 1"
+  },
+  "M_34_2.dc.html": {
+   "x": 1160,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 2"
+  },
+  "M_34_3.dc.html": {
+   "x": 2320,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 3"
+  },
+  "M_34_4.dc.html": {
+   "x": 3480,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 4"
+  },
+  "M_34_5.dc.html": {
+   "x": 4640,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 5"
+  },
+  "M_34_6.dc.html": {
+   "x": 5800,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 6"
+  },
+  "M_34_7.dc.html": {
+   "x": 6960,
+   "y": 7170,
+   "w": 1080,
+   "h": 1440,
+   "title": "Macro Daily \u00b7 34 \u00b7 7"
+  },
+  "M_916_cover.dc.html": {
+   "x": 0,
+   "y": 9030,
+   "w": 1080,
+   "h": 1920,
+   "title": "Macro Daily \u00b7 916 \u00b7 cover"
+  },
+  "M_916_wide.dc.html": {
+   "x": 1160,
+   "y": 9030,
+   "w": 1600,
+   "h": 900,
+   "title": "Macro Daily \u00b7 916 \u00b7 wide"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "Card2.dc.html",
+  "Card3.dc.html",
+  "Card4.dc.html",
+  "Card5.dc.html",
+  "Card6.dc.html",
+  "Card7.dc.html",
+  "B1.dc.html",
+  "B2.dc.html",
+  "B7.dc.html",
+  "C1.dc.html",
+  "C2.dc.html",
+  "C7.dc.html",
+  "M_45_1.dc.html",
+  "M_45_2.dc.html",
+  "M_45_3.dc.html",
+  "M_45_4.dc.html",
+  "M_45_5.dc.html",
+  "M_45_6.dc.html",
+  "M_45_7.dc.html",
+  "M_34_1.dc.html",
+  "M_34_2.dc.html",
+  "M_34_3.dc.html",
+  "M_34_4.dc.html",
+  "M_34_5.dc.html",
+  "M_34_6.dc.html",
+  "M_34_7.dc.html",
+  "M_916_cover.dc.html",
+  "M_916_wide.dc.html"
+ ],
+ "notes": {
+  "t1": {
+   "kind": "title1",
+   "maxW": 8040,
+   "text": "Option A \u00b7 Dark cover, white number-led story cards (full 7-card set)",
+   "x": 0,
+   "y": -300
+  },
+  "t2": {
+   "kind": "title1",
+   "maxW": 3400,
+   "text": "Option B \u00b7 Light editorial, framed photos on cream and white",
+   "x": 0,
+   "y": 1500
+  },
+  "t3": {
+   "kind": "title1",
+   "maxW": 3400,
+   "text": "Option C \u00b7 Photo-forward, white sheet over the photo",
+   "x": 0,
+   "y": 3300
+  },
+  "Mt0": {
+   "kind": "title1",
+   "maxW": 8040,
+   "text": "4:5 \u00b7 Instagram, LinkedIn \u00b7 1080\u00d71350",
+   "x": 0,
+   "y": 5100
+  },
+  "Mt1": {
+   "kind": "title1",
+   "maxW": 8040,
+   "text": "3:4 \u00b7 Lemon8, Rednote \u00b7 1080\u00d71440",
+   "x": 0,
+   "y": 6870
+  },
+  "Mt2": {
+   "kind": "title1",
+   "maxW": 8040,
+   "text": "9:16 cover (TikTok, Reels, Shorts, 1080\u00d71920) and 16:9 image (X, YouTube, 1600\u00d7900)",
+   "x": 0,
+   "y": 8730
+  }
+ },
+ "designSystems": []
+}
