@@ -2,11 +2,12 @@ import re, json, os, sys
 src=open('/home/claude/gen5.py').read()
 SHADE="linear-gradient(to top, rgba(35,63,69,0.92) 0%, rgba(35,63,69,0.78) 38%, rgba(35,63,69,0) 72%)"
 NEW916 = '''if kind=="cover" and H==1920:
-        return root("#233F45", f'{ph(1920,c["cover_ph"],1080)}<div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: {SHADE}"></div><div style="position: absolute; left: 86px; right: 86px; top: 1080px; display: flex; flex-direction: column; gap: 28px"><div style="font-size: 30px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: {{{{accent}}}}">{L} · Fri 6 Nov 2026</div><div style="font-size: 118px; font-weight: 700; line-height: 1.04; color: #FFFFFF">{c["cover_head"]}</div></div>{credit("bottom: 300px; left: 86px")}')
+        return root("#233F45", f'{ph(1920,c["cover_ph"],1080)}<div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: {SHADE}"></div><div style="position: absolute; left: 86px; right: 86px; top: 1080px; display: flex; flex-direction: column; gap: 28px"><div style="font-size: 30px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: {{{{accent}}}}">{L} · Sat 7 Nov 2026</div><div style="font-size: 118px; font-weight: 700; line-height: 1.04; color: #FFFFFF">{c["cover_head"]}</div></div>{credit("bottom: 300px; left: 86px")}')
     '''
 NEWWIDE = '''if kind=="wide":
-        return root("#233F45", f'{ph(900,c["cover_ph"],1600)}<div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: {SHADE}"></div><div style="position: absolute; left: 86px; right: 200px; bottom: 96px; display: flex; flex-direction: column; gap: 20px"><div style="font-size: 26px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: {{{{accent}}}}">{L} · Fri 6 Nov 2026</div><div style="font-size: 96px; font-weight: 700; line-height: 1.04; color: #FFFFFF">{c["cover_head"]}</div></div>{credit("bottom: 40px; left: 86px")}')
+        return root("#233F45", f'{ph(900,c["cover_ph"],1600)}<div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: {SHADE}"></div><div style="position: absolute; left: 86px; right: 200px; bottom: 96px; display: flex; flex-direction: column; gap: 20px"><div style="font-size: 26px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: {{{{accent}}}}">{L} · Sat 7 Nov 2026</div><div style="font-size: 96px; font-weight: 700; line-height: 1.04; color: #FFFFFF">{c["cover_head"]}</div></div>{credit("bottom: 40px; left: 86px")}')
     if False:'''
+src=src.replace('FRI 6 NOV 2026','SAT 7 NOV 2026').replace('"6 NOV 2026"','"7 NOV 2026"')
 # placeholder photo + credit -> real photos
 src=src.replace('''ph=lambda h,lab,w=None: f'<div style="position: relative; {"width: %dpx; "%w if w else ""}height: {h}px; flex: none; background: #DDE3E6; display: flex; align-items: center; justify-content: center; color: #4A5F63; font-size: 28px">[Photo · {lab}]</div>\'''','''ph=lambda h,lab,w=None: PHOTO(h,lab,w)''')
 src=src.replace('''credit=lambda pos: f'<div style="position: absolute; {pos}; padding: 8px 20px; border-radius: 9999px; background: #FFFFFF; font-size: 22px; color: #4A5F63">Photo: [credit]</div>\'''','''credit=lambda pos: CREDIT(pos)''')
@@ -25,13 +26,12 @@ def ICON(kind):
     return f'<div style="position: absolute; {pos}; width: 72px; height: 72px; border-radius: 50% 4px 50% 50%; background: #233F45; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-family: \'Instrument Serif\', Georgia, serif; font-style: italic; font-size: 46px; line-height: 1; padding-bottom: 6px; box-sizing: border-box">Si<div style="position: absolute; top: 20px; right: 17px; width: 7px; height: 7px; border-radius: 50%; background: #F0937B"></div></div>'
 exec(src)
 PH={ # key: (file id, credit, bg-position)
- 'srv1':('4508751','Brett Sayles','center'),
- 'srv2':('5203849','Brett Sayles','center'),
- 'srv3':('17489153','panumas nikhomkhai','center'),
- 'chip':('785418','Jonas Svidras','center'),
- 'bkk1':('20020757','Markus Winkler','center 60%'),
- 'bkk2':('11262197','Markus Winkler','center 35%'),
- 'srv1b':('4508751','Brett Sayles','10% 50%'),
+ 'wyo':('4508751','Brett Sayles','center'),
+ 'oai':('5203849','Brett Sayles','center'),
+ 'thdc':('17489153','panumas nikhomkhai','center'),
+ 'sol':('11262197','Markus Winkler','center 35%'),
+ 'hk':('785418','Jonas Svidras','center'),
+ 'qte':('20020757','Markus Winkler','center 60%'),
 }
 URLS={}   # key -> url, set per render mode
 CUR=[None]
@@ -41,14 +41,16 @@ def PHOTO(h,lab,w=None):
 def CREDIT(pos):
     fid,cr,_=PH[CUR[0]]
     return f'<div style="position: absolute; {pos}; font-size: 22px; font-weight: 500; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 3px rgba(0,0,0,0.9), 0 1px 10px rgba(0,0,0,0.75)">Photo: {cr} / Pexels</div>'
-AI['cover_ph']='srv1'; AI['qph']='srv1b'
-AI['items']=["OpenAI pledges to pay for data centre power","Microsoft declines to double Nscale deal","Nvidia reportedly caps China cloud business","Thai SEC drafts crypto derivatives rules","Bank of Thailand eyes stablecoin rules"]
+AI['cover_ph']='wyo'; AI['qph']='qte'
+AI['cover_head']="Google commits $17B to Wyoming"
+AI['mood']="curious"; AI['quote']="Any sufficiently advanced technology is indistinguishable from magic."; AI['who']="Arthur C. Clarke"; AI['by']="Profiles of the Future · 1973"; AI['qsize']=58
+AI['items']=["Google to invest $17B in Wyoming data centre","OpenAI says business grew 70% in Q3","Zhi Sheng backs Thailand AI data centre","Solana tokenized stocks hit $657M in a day","Hong Kong approves 17 tokenized products"]
 AI['S']=[
- (2,"US · AI Companies","38+","jurisdictions voted to restrict data centres","OpenAI reaffirms full power-cost pledge and drops NDAs","","It will also report water use and publish construction plans, two days after the vote.","Public backlash is now a cost of building AI capacity","The Washington Post, CNBC (5 Nov)","srv2"),
- (3,"Global · AI Infrastructure","$35B","Nscale planned IPO","Microsoft declines to double its Nscale contract","","It held an option to more than double its Texas AI capacity deal, worth tens of billions.","Even the biggest buyers are rationing AI capacity commitments","Financial Times via AI Weekly (5 Nov)","srv3"),
- (4,"Asia · AI Infrastructure","49%","cap on Chinese customers, reportedly","Nvidia reportedly tells cloud partners to cap China business","","The FT reported on 3 Nov that at least 51% of services on new contracts must go to non-Chinese firms. Nvidia has not confirmed it.","Chip access rules now reach Southeast Asia's data centres","Financial Times (3 Nov) via The Next Web, Techzine","chip"),
- (5,"Thailand · Digital Assets","28 Nov","comment deadline","Thai SEC drafts crypto derivatives rules","","Eight draft notifications are open for public comment.","Sets the framework for regulated crypto derivatives in Thailand","Thailand Business News (31 Oct), The Asian Banker (29 Oct)","bkk1"),
- (6,"Thailand · Stablecoins","5","new central bank measures, Nov 2026 to Mar 2027","Bank of Thailand to bring stablecoins under closer supervision","","The package also covers buy now pay later and gold dealers' cash payments. The stablecoin rules have not been detailed.","Thai crypto now faces two regulators moving at once, the SEC and the central bank","FinTech Global (2 Nov), citing FinTech Singapore","bkk2"),
+ (2,"US · AI Infrastructure","$17B","Google, first Wyoming data centre","Google to invest $17B in a Wyoming data centre","","Google said on Thursday 5 Nov that it will build its first data centre in Wyoming. Reuters reported it on 6 Nov.","A new US site was committed the same week OpenAI said it will end NDAs with local officials","Reuters via Investing.com (6 Nov)","oai"),
+ (3,"US · AI Companies","70%","OpenAI growth, Q3 vs Q2","OpenAI says its business grew 70% in Q3","","CFO Sarah Friar told CNBC that enterprise demand doubled over the same period. The figures are the company's own.","OpenAI says it will keep building out data centres","Reuters via Investing.com (6 Nov)","oai"),
+ (4,"Thailand · AI Data Centres","$1.6B","10-year colocation contract, excl. power","Zhi Sheng lines up a loan for its Thailand AI data centre","","The loan was announced as US$590M; its chairman cited US$580M. Phase one, about a third of capacity, is due in early 2027.","Thailand's Eastern Economic Corridor gains a contract-backed AI site","DataCenterNews Asia (6 Nov)","thdc"),
+ (5,"Global · Tokenization","$657M","Solana tokenized stocks, 2 Nov","Solana tokenized stock trading hits $657M in a day","","Backpack Securities made up $598M, about 91%. It is the highest since June.","It is trading volume, not the amount invested","COINTURK News (5 Nov)","sol"),
+ (6,"Hong Kong · Tokenization","17","tokenized products approved for retail","Hong Kong has approved 17 tokenized products for retail investors","","The SFC's chief executive said they manage about $1.3B, up 34% from last year.","The figures were given at Hong Kong FinTech Week","U.Today (6 Nov), citing SCMP","hk"),
 ]
 def write(outdir, urls, rows_only=None):
     URLS.clear(); URLS.update(urls)
