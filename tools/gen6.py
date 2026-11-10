@@ -42,15 +42,15 @@ def PHOTO(h,lab,w=None):
 def CREDIT(pos):
     fid,cr,_=PH[CUR[0]]
     return f'<div style="position: absolute; {pos}; font-size: 22px; font-weight: 500; color: #FFFFFF; font-weight: 600; text-shadow: 0 0 3px rgba(0,0,0,0.9), 0 1px 10px rgba(0,0,0,0.75)">Photo: {cr} / Pexels</div>'
-AI['cover_ph']='dc'; AI['qph']='dc2'
+AI['cover_ph']='dc'; AI['qph']='bkk'
 AI['cover_head']="Thailand pauses 166 data centre projects"
 AI['mood']="cautious"; AI['quote']="We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run."; AI['who']="Roy Amara"; AI['by']="Institute for the Future · Amara's Law"; AI['qsize']=54
-AI['items']=["Thailand pauses or freezes 166 data centre projects","Anthropic reportedly takes over $3.4B of generator orders","Thai AI-linked exports: 802B baht last year","Bank of Thailand stablecoin hearing closes 17 Nov","Crypto liquidations top $1B in a day"]
+AI['items']=["Thailand pauses or freezes 166 data centre projects","Anthropic reportedly takes over $3.4B of generator orders","Thai AI-linked exports: 802B baht last year","DeepSeek agent platform reportedly hits 1.54M daily users","Crypto liquidations top $1B in a day"]
 AI['S']=[
  (2,"Thailand · AI Infrastructure","166","data centre projects paused or frozen, reportedly","Thailand pauses 166 data centre projects","","Construction is paused on 49 projects and approval decisions are frozen on 117 more, reportedly.","Thailand's data centre policy board made the decision at its first meeting, on 4 September 2026","ShiftDelete.Net (8 Nov), citing the Guardian (7 Nov)","rack"),
  (3,"Global · AI Infrastructure","$3.4B","generator orders Anthropic reportedly took over","Anthropic reportedly takes over $3.4B of generator orders","","The gas-powered generators total 1.7 gigawatts. The orders were taken over from Texas-based OnePWR Solutions, per the Financial Times.","Neither Anthropic nor OnePWR had publicly confirmed the deal","The Neuron (9 Nov), citing the Financial Times and Reuters","blue"),
  (4,"Thailand · AI and Economy","802B","baht of AI-linked exports last year","Thai AI-linked exports reach 802B baht","","Laptops, optical transceivers and backup power equipment made up more than 7% of Thailand's shipments.","Bloomberg-compiled estimates say the data revisions could add 0.2–0.3 points to 2026 GDP growth","VnExpress International (8 Nov), citing Bloomberg estimates","pool"),
- (5,"Thailand · Digital Assets","1:1","baht stablecoin peg proposed by the Bank of Thailand","Bank of Thailand stablecoin hearing closes 17 Nov","","The public hearing runs from 19 Oct to 17 Nov. The stablecoin would be fully backed by reserve assets.","Issuers and wallet providers would hold separate, regulated roles","Bank of Thailand public hearing page (read 10 Nov); CoinGeek (6 Nov)","bkk"),
+ (5,"China · AI Companies","1.54M","daily active users, DeepSeek agent platform, reportedly","DeepSeek agent platform reportedly hits 1.54M daily users","","Bloomberg reported the figure on 8 Nov. The platform is DeepSeek's AI agent product.","The figure is Bloomberg's report, summarised by The Neuron on 9 Nov","The Neuron (9 Nov), citing Bloomberg (8 Nov)","dc2"),
  (6,"Global · Crypto Markets","$1B","crypto positions liquidated in 24 hours, CoinGlass","Crypto liquidations top $1B in a day","","Longs were $913M of the total. Ether saw $448M and bitcoin $272M. Bitcoin fell to about $73,761, its lowest since August.","A liquidation closes a leveraged position when price moves against it","CoinDesk (9 Nov), citing CoinGlass","chip"),
 ]
 def write(outdir, urls, rows_only=None):
